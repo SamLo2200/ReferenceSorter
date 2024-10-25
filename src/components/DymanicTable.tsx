@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 
 export default function DymanicTable() {
-  const [citationContent, setCitationContent] = useState<string[]>([
+  const [citationContent] = useState<string[]>([
     "test1",
     "test2",
     "test3",
@@ -22,7 +22,7 @@ export default function DymanicTable() {
     "test3",
     "test3",
   ]);
-  const [citationCount, setCitationCount] = useState<number>(0);
+  // const [citationCount, setCitationCount] = useState<number>(0);
 
   return (
     <div>
