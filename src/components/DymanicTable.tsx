@@ -10,18 +10,25 @@ export default function DymanicTable() {
         "test2",
         "test3",
         "test4",
+        "test5",
     ]);
     // const [citationCount, setCitationCount] = useState<number>(0);
 
-    const handleChange = (
+    function handleChange(
         index: number,
         event: React.ChangeEvent<HTMLInputElement>
-    ) => {
+    ) {
         const newCitationContent = [...citationContent];
         newCitationContent[index] = event.target.value;
         setCitationContent(newCitationContent);
         console.log(newCitationContent);
-    };
+    }
+
+    function removeField(index: number) {
+        const newCitationContent = [...citationContent];
+        newCitationContent.splice(index, 1);
+        setCitationContent(newCitationContent);
+    }
 
     return (
         <div>
@@ -45,9 +52,9 @@ export default function DymanicTable() {
                                 {index ? (
                                     <Button
                                         variant="destructive"
-                                        onClick={() =>
-                                            console.log("hello world")
-                                        }>
+                                        onClick={(e) => {
+                                            removeField(index, e);
+                                        }}>
                                         Remove
                                     </Button>
                                 ) : null}
