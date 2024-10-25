@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
+import { Button } from "./ui/button";
 
 export default function DymanicTable() {
     const [citationContent, setCitationContent] = useState<string[]>([
         "test1",
         "test2",
         "test3",
+        "test4",
     ]);
     // const [citationCount, setCitationCount] = useState<number>(0);
 
@@ -30,11 +32,27 @@ export default function DymanicTable() {
                         key={index}>
                         <div>
                             <label>Citation {index + 1}</label>
-                            <Input
-                                placeholder="Enter your citation here"
-                                name="citation"
-                                onChange={(e) => handleChange(index, e)}
-                            />
+
+                            <div className="grid grid-cols-4 lg:grid-cols-6 gap-4">
+                                <Input
+                                    placeholder="Enter your citation here"
+                                    name="citation"
+                                    value={citationContent[index] || ""}
+                                    onChange={(e) => handleChange(index, e)}
+                                    className="col-span-3 lg:col-span-4"
+                                />
+
+                                {index ? (
+                                    <Button
+                                        variant="destructive"
+                                        onClick={() =>
+                                            console.log("hello world")
+                                        }>
+                                        Remove
+                                    </Button>
+                                ) : null}
+                                <div />
+                            </div>
                         </div>
                     </div>
                 );
