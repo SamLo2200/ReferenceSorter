@@ -1,17 +1,33 @@
-import { useEffect, useState } from "react";
-
 export default function SortedDisplay({
     citationContent,
+    className,
 }: CitationContentProps) {
     const citationContent_arr_temp: string[] = [...citationContent];
 
     return (
-        <div>
-            {citationContent_arr_temp
-                .sort()
-                .map((citation: string, index: number) => {
-                    return <div key={index}>{citation}</div>;
-                })}
+        <div className={className}>
+            <div className="lg:p-7">
+                <p className="font-bold lg:pb-3 text-base"> Sorted List: </p>
+                <hr className="my-2 mb-3"></hr>
+
+                <div className="reference-list flex flex-col gap-3">
+                    {citationContent_arr_temp
+                        .sort()
+                        .map((citation: string, index: number) => {
+                            return (
+                                <div
+                                    className={
+                                        index % 2 === 0
+                                            ? "bg-gray-50 rounded p-2"
+                                            : "bg-gray-100 rounded p-2"
+                                    }
+                                    key={index}>
+                                    {citation}
+                                </div>
+                            );
+                        })}
+                </div>
+            </div>
         </div>
     );
 }
