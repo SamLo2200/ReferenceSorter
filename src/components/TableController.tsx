@@ -16,7 +16,7 @@ export default function TableController() {
                 />
             </div>
 
-            <div className="grid-cols-1 mt-10 lg:col-span-4 lg:mt-0 place-content-center">
+            <div className="grid-cols-1 mt-10 lg:col-span-4 lg:mt-0">
                 <SortedDisplay
                     citationContent={citationContent}
                     setCitationContent={setCitationContent}
