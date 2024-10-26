@@ -16,7 +16,10 @@ export default function TableController() {
                 />
             </div>
 
-            <SortedDisplay />
+            <SortedDisplay
+                citationContent={citationContent}
+                setCitationContent={setCitationContent}
+            />
         </div>
     );
 }
