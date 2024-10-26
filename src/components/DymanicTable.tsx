@@ -97,7 +97,8 @@ export default function DymanicTable({
                 Clear
             </Button>
 
-            <div ref={bottomRef}></div>
+            {/* Too annoying, removed  */}
+            {/* <div ref={bottomRef}></div> */}
         </div>
     );
 }
