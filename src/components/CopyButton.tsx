@@ -9,7 +9,7 @@ export default function CopyButton({
 
     function copy() {
         const sortedReferences_temp: string[] = [...sortedReferences];
-        const formattedCitations = sortedReferences_temp.join("\n");
+        const formattedCitations = sortedReferences_temp.join("\n\n");
 
         navigator.clipboard
             .writeText(formattedCitations)
