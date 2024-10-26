@@ -80,7 +80,7 @@ export default function DymanicTable({
             </div>
 
             <Button
-                className="col-span-2 bg-green-500"
+                className="col-span-3 lg:col-span-2 bg-green-500"
                 onClick={() => {
                     addField();
                     scrollToBottom();
@@ -90,7 +90,7 @@ export default function DymanicTable({
 
             <Button
                 variant="outline"
-                className="col-span-1"
+                className="col-span-2 lg:col-span-1"
                 onClick={() => {
                     setCitationContent([""]);
                 }}>
