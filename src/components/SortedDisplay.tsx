@@ -25,8 +25,8 @@ export default function SortedDisplay({
                                 <div
                                     className={
                                         index % 2 === 0
-                                            ? "bg-gray-50 rounded p-2"
-                                            : "bg-gray-100 rounded p-2"
+                                            ? "bg-gray-50 rounded p-2 truncate"
+                                            : "bg-gray-100 rounded p-2 truncate"
                                     }
                                     key={index}>
                                     {citation}
