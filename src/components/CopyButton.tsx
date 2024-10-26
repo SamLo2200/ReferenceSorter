@@ -15,9 +15,10 @@ export default function CopyButton({
             .writeText(formattedCitations)
             .then(() => {
                 toast({
-                    title: "Reference list copied to clipboard!",
+                    title: "Copied!",
                     description:
                         "Remember to italicize journal name as this is unformatted!",
+                    duration: 1500,
                 });
             })
             .catch((err) => {
@@ -25,6 +26,7 @@ export default function CopyButton({
                     variant: "destructive",
                     title: "Error: Copying failed",
                     description: err,
+                    duration: 1500,
                 });
             });
     }
