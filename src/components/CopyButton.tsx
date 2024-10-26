@@ -1,8 +1,12 @@
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "./ui/button";
+import { Toaster } from "./ui/toaster";
 
 export default function CopyButton({
     citationContent: sortedReferences,
-}: CitationContentProps) {
+}: CitationContentPropsWithoutSet) {
+    const { toast } = useToast();
+
     function copy() {
         const sortedReferences_temp: string[] = [...sortedReferences];
         const formattedCitations = sortedReferences_temp.join("\n");
@@ -10,20 +14,32 @@ export default function CopyButton({
         navigator.clipboard
             .writeText(formattedCitations)
             .then(() => {
-                alert("Array copied to clipboard:\n\n" + formattedCitations);
+                toast({
+                    title: "Reference list copied to clipboard!",
+                    description:
+                        "Remember to italicize journal name as this is unformatted!",
+                });
             })
             .catch((err) => {
-                console.error("Failed to copy: ", err);
+                toast({
+                    variant: "destructive",
+                    title: "Error: Copying failed",
+                    description: err,
+                });
             });
     }
 
     return (
-        <Button
-            onClick={() => {
-                copy();
-            }}>
-            {" "}
-            Copy{" "}
-        </Button>
+        <div>
+            <Button
+                onClick={() => {
+                    copy();
+                }}>
+                {" "}
+                Copy{" "}
+            </Button>
+
+            <Toaster />
+        </div>
     );
 }
