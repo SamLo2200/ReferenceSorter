@@ -1,4 +1,3 @@
-import DymanicTable from "@/components/DymanicTable";
 import TableController from "@/components/TableController";
 
 export default function Home() {
