@@ -1,3 +1,5 @@
+import CopyButton from "./CopyButton";
+
 export default function SortedDisplay({
     citationContent,
     className,
@@ -7,7 +9,11 @@ export default function SortedDisplay({
     return (
         <div className={className}>
             <div className="p-7">
-                <p className="font-bold pb-3 text-base"> Sorted List: </p>
+                <div className="flex flex-row justify-between items-center">
+                    <p className="font-bold pb-3 text-base"> Sorted List: </p>
+                    <CopyButton citationContent={citationContent_arr_temp} />
+                </div>
+
                 <hr className="my-2 mb-3"></hr>
 
                 <div className="reference-list flex flex-col gap-3">
