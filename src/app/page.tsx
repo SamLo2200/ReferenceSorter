@@ -3,7 +3,7 @@ import TableController from "@/components/TableController";
 
 export default function Home() {
     return (
-        <main className="flex justify-center items-center mx-20 my-20">
+        <main className="flex justify-center items-center mx-10 my-11 lg:my-20 lg:mx-20">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-3 lg:grid-cols-6">
                 <div className="flex flex-col gap-1 lg:col-span-2">
                     <p className="text-4xl font-bold place-self-start lg:col-span-2">
@@ -28,7 +28,6 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="md:col-span-2 lg:col-span-3">
-                    {/* <DymanicTable /> */}
                     <TableController />
                 </div>
             </div>

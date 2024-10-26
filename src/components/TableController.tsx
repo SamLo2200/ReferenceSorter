@@ -2,14 +2,21 @@
 
 import { useState } from "react";
 import DymanicTable from "./DymanicTable";
+import SortedDisplay from "./SortedDisplay";
 
 export default function TableController() {
     const [citationContent, setCitationContent] = useState<string[]>([""]);
 
     return (
-        <DymanicTable
-            citationContent={citationContent}
-            setCitationContent={setCitationContent}
-        />
+        <div className="">
+            <div className="">
+                <DymanicTable
+                    citationContent={citationContent}
+                    setCitationContent={setCitationContent}
+                />
+            </div>
+
+            <SortedDisplay />
+        </div>
     );
 }
