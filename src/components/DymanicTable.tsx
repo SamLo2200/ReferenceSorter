@@ -5,13 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 
 export default function DymanicTable() {
-    const [citationContent, setCitationContent] = useState<string[]>([
-        "test1",
-        "test2",
-        "test3",
-        "test4",
-        "test5",
-    ]);
+    const [citationContent, setCitationContent] = useState<string[]>([""]);
 
     // Capture text in input onChange event and store it into array
     function handleChange(
