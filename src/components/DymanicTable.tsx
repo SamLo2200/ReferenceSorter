@@ -80,7 +80,7 @@ export default function DymanicTable({
             </div>
 
             <Button
-                className="col-span-3 lg:col-span-2 bg-green-500"
+                className="col-span-4 lg:col-span-2 bg-green-500"
                 onClick={() => {
                     addField();
                     scrollToBottom();
