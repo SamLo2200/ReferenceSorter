@@ -16,11 +16,11 @@ export default function TableController() {
                 />
             </div>
 
-            <div className="grid-cols-1 lg:col-span-4">
+            <div className="grid-cols-1 mt-10 lg:col-span-4 lg:mt-0">
                 <SortedDisplay
                     citationContent={citationContent}
                     setCitationContent={setCitationContent}
-                    className="bg-slate-50 lg:h-[85vh] lg:rounded overflow-hidden overflow-y-scroll scrollbar-thin scrollbar-thumb-slate-500 scrollbar-track-slate-200"
+                    className="bg-slate-50 min-h-[85vh] lg:h-[85vh] rounded lg:overflow-hidden lg:overflow-y-scroll lg:scrollbar-thin lg:scrollbar-thumb-slate-500 lg:scrollbar-track-slate-200"
                 />
             </div>
         </div>

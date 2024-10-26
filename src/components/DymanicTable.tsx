@@ -87,6 +87,16 @@ export default function DymanicTable({
                 }}>
                 Add
             </Button>
+
+            <Button
+                variant="outline"
+                className="col-span-1"
+                onClick={() => {
+                    setCitationContent([""]);
+                }}>
+                Clear
+            </Button>
+
             <div ref={bottomRef}></div>
         </div>
     );

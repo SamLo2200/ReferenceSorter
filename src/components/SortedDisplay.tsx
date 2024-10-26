@@ -6,13 +6,14 @@ export default function SortedDisplay({
 
     return (
         <div className={className}>
-            <div className="lg:p-7">
-                <p className="font-bold lg:pb-3 text-base"> Sorted List: </p>
+            <div className="p-7">
+                <p className="font-bold pb-3 text-base"> Sorted List: </p>
                 <hr className="my-2 mb-3"></hr>
 
                 <div className="reference-list flex flex-col gap-3">
                     {citationContent_arr_temp
                         .sort()
+                        .filter((citation) => citation !== "")
                         .map((citation: string, index: number) => {
                             return (
                                 <div
