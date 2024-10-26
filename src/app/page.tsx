@@ -1,4 +1,5 @@
 import DymanicTable from "@/components/DymanicTable";
+import TableController from "@/components/TableController";
 
 export default function Home() {
     return (
@@ -27,7 +28,8 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="md:col-span-2 lg:col-span-3">
-                    <DymanicTable />
+                    {/* <DymanicTable /> */}
+                    <TableController />
                 </div>
             </div>
         </main>

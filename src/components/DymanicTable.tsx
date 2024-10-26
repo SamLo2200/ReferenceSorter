@@ -4,8 +4,11 @@ import { useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 
-export default function DymanicTable() {
-    const [citationContent, setCitationContent] = useState<string[]>([""]);
+export default function DymanicTable({
+    citationContent,
+    setCitationContent,
+}: CitationContentProps) {
+    // const [citationContent, setCitationContent] = useState<string[]>([""]);
 
     // Capture text in input onChange event and store it into array
     function handleChange(
